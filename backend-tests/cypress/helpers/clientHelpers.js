@@ -1,7 +1,7 @@
 const faker = require('faker')
 
 function createFakeClientPayload(){
-    const fakeName = faker.name.firstname()
+    const fakeName = faker.name.firstName()
     const fakeEmail = faker.internet.email()
     const fakePhone = faker.phone.phoneNumber()
 
@@ -13,15 +13,16 @@ function createFakeClientPayload(){
     return payload
 }
 
-function createClientPayload(){
+/*function createClientPayload(){
     const name = 'Test'
     const email = 'tester@email.com'
     const 
-}
+} */
+
 
 module.exports = {
      createFakeClientPayload,
-     createClientPayload,
+    // createClientPayload,
 }
 
 
