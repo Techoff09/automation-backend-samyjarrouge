@@ -17,30 +17,36 @@ import * as clientHelpers from '../helpers/clientHelpers'
 
 describe('Testing Auth', function(){
   
+     
     // Test-case 01
 
-    it.only ('create a new client', function(){
-        cy.authenticateSession().then((response => {
-            
-            let fakeClientPayload = clientHelpers.createFakeClientPayload()
+    it ('Fetch all existing clients', function(){
+        clientHelpers.getAllClientsRequest(cy)
+    })
+    
+    
+    // Test-case 02
 
-            cy.request({
-                method: "POST",
-                url: 'http://localhost:3000/api/client/new',
-                headers: {
-                    'X-User-Auth': JSON.stringify(Cypress.env().loginToken),
-                    'Content-Type': 'application/json'
-                },
-                body:fakeClientPayload
-            }).then((response=> {
-                //cy.log(response.body)
-                const responseAsString = JSON.stringify(response.body)
-                expect(responseAsString).to.have.string(fakeClientPayload.name)
-            }))
-        }))
+    it ('Create new faker client & assert new client', function(){
+        clientHelpers.createNewClientRequest(cy)
     })
 
-    // Test-case 01 (manuel)
+    // Test-case 03
+   
+    it ('Edit client info and assert updated client info', function(){
+        clientHelpers.editNewClient(cy)
+    }) 
+
+    // Test-case 04
+   
+    it ('Delete a client & assert deletion is True', function(){
+        clientHelpers.deleteLastClient(cy)
+    }) 
+
+
+
+    
+    // Test-case 01 (manuel) cy.log(response.body)
 
   /*  it.only ('create a new client', function(){
         cy.authenticateSession().then((response => {
@@ -64,28 +70,7 @@ describe('Testing Auth', function(){
     }) */
 
 
-    // Test-case 02
-
-    it ('Assert new client on clients page', function(){
-        cy.authenticateSession().then((response=>{
-            cy.request({
-                method:"GET",
-                url: 'http://localhost:3000/api/clients',
-                headers: {
-                    'X-User-Auth': JSON.stringify(Cypress.env().loginToken),
-                    'Content-Type': 'application/json'
     
-                },
-            }).then((response=> {
-                cy.log(response.body[0].id)
-                cy.log(response.body[0].created)
-                cy.log(response.body[0].name)
-                cy.log(response.body[0].email)
-                cy.log(response.body[0].telephone)
-
-            }))
-        }))
-    })
     
 })
     
