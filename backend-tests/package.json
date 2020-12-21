@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress open",
+    "report": "cypress run --reporter mochawesome"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,9 @@
     "cypress": "^4.7.0"
   },
   "dependencies": {
-    "faker": "^4.1.0"
+    "faker": "^4.1.0",
+    "mocha": "^5.2.0",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0"
   }
 }

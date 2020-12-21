@@ -1,0 +1,176 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-12-21T07:20:18.203Z",
+    "end": "2020-12-21T07:20:25.702Z",
+    "duration": 7499,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3cfb699d-dc95-4458-96ad-a259caf4e5d5",
+      "title": "",
+      "fullFile": "cypress/integration/backend-auth.spec.js",
+      "file": "cypress/integration/backend-auth.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "80a0dc54-0c7b-4bf2-802d-ce20ba55de20",
+          "title": "Testing Auth",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Assert login & logout is successful",
+              "fullTitle": "Testing Auth Assert login & logout is successful",
+              "timedOut": null,
+              "duration": 958,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "clientHelpers.assertLoginLogoutRequest(cy);",
+              "err": {},
+              "uuid": "f5ccf55c-8b88-404b-8634-bf5412fb9d79",
+              "parentUUID": "80a0dc54-0c7b-4bf2-802d-ce20ba55de20",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Starting total number of clients w assertion",
+              "fullTitle": "Testing Auth Starting total number of clients w assertion",
+              "timedOut": null,
+              "duration": 638,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "clientHelpers.getTotalAmountOfClientsRequest(cy);",
+              "err": {},
+              "uuid": "5c711576-3631-4b7e-8514-b15ba5e3f20b",
+              "parentUUID": "80a0dc54-0c7b-4bf2-802d-ce20ba55de20",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create new faker client & assert new client",
+              "fullTitle": "Testing Auth Create new faker client & assert new client",
+              "timedOut": null,
+              "duration": 1276,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "clientHelpers.createNewClientRequest(cy);",
+              "err": {},
+              "uuid": "a1e3f16b-a253-45e8-b2e6-67c7696d6a3f",
+              "parentUUID": "80a0dc54-0c7b-4bf2-802d-ce20ba55de20",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit last created client & assert updated client info",
+              "fullTitle": "Testing Auth Edit last created client & assert updated client info",
+              "timedOut": null,
+              "duration": 2251,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "clientHelpers.editNewClientRequest(cy);",
+              "err": {},
+              "uuid": "6608a211-9b3d-42b0-ad57-42092743ea17",
+              "parentUUID": "80a0dc54-0c7b-4bf2-802d-ce20ba55de20",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete last created client. Assert deletion is True. Logout & assert Ok",
+              "fullTitle": "Testing Auth Delete last created client. Assert deletion is True. Logout & assert Ok",
+              "timedOut": null,
+              "duration": 2203,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "clientHelpers.deleteLastClientRequest(cy);",
+              "err": {},
+              "uuid": "eff5c438-ec38-4c73-b18e-8ad5b678ebc1",
+              "parentUUID": "80a0dc54-0c7b-4bf2-802d-ce20ba55de20",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f5ccf55c-8b88-404b-8634-bf5412fb9d79",
+            "5c711576-3631-4b7e-8514-b15ba5e3f20b",
+            "a1e3f16b-a253-45e8-b2e6-67c7696d6a3f",
+            "6608a211-9b3d-42b0-ad57-42092743ea17",
+            "eff5c438-ec38-4c73-b18e-8ad5b678ebc1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7326,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {},
+      "version": "5.1.0"
+    }
+  }
+}

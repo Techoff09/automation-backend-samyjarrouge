@@ -14,28 +14,28 @@ describe('Testing Auth', function(){
 
     // Test-case 02
 
-    it ('Fetch total number of clients w assertion', function(){
+    it ('Starting total number of clients w assertion', function(){
         clientHelpers.getTotalAmountOfClientsRequest(cy)
     })
     
     
     // Test-case 03
 
-    it.only ('Create new faker client & assert new client', function(){
+    it ('Create new faker client & assert new client', function(){
         clientHelpers.createNewClientRequest(cy)
     })
 
 
     // Test-case 04
    
-    it ('Edit last created client and assert updated client info', function(){
+    it ('Edit last created client & assert updated client info', function(){
         clientHelpers.editNewClientRequest(cy)
     }) 
 
 
     // Test-case 05
    
-    it ('Delete last created client & assert deletion is True', function(){
+    it ('Delete last created client. Assert deletion is True. Logout & assert Ok', function(){
         clientHelpers.deleteLastClientRequest(cy)
     }) 
 
